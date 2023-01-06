@@ -1,0 +1,21 @@
+package service;
+
+import java.util.List;
+
+public class CalculationService {
+
+  public static Integer max(List<Integer> list) {
+    if (list.isEmpty()) {
+      throw new IllegalStateException("List can't be empty");
+    }
+
+    //isso e uma logica simples de achar o maior de uma lista de uma forma problematica
+    Integer max = list.get(0);
+    for (Integer item : list) {
+      if (item.compareTo(max) > 0) {
+        max = item;
+      }
+    }
+    return max;
+  }
+}
